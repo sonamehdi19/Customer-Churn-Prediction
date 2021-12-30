@@ -178,7 +178,7 @@ while(model@model$coefficients_table %>%
     .[-1,] %>%                     #on them to make decision
     arrange(desc(p_value)) %>%
     .[1,1] -> v       #v-ye set olundu 
-  features <- features[features!=v]      #p-valuesi 0.05 den yuxari olan featureleri atiriq 
+  features <- features[features!=v]      #if p-value is greater than o.05, then eliminate this feature 
   
   
   
